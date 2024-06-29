@@ -1192,7 +1192,8 @@ padding: unset;
 
 .card .card-body ul li::before {
   content: "\2022";
-  color: #28104e;
+
+color:#E0B0FF;
   font-weight: bold;
   font-size: 22px;
   display: inline-block;
