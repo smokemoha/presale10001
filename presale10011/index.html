@@ -9,7 +9,82 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <style>
+    .boxed__btn {
+        display: inline-block;
+        padding: 10px;
+        margin: 20px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(45deg, #00ff00, #009900);
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
+    .boxed__btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .boxed__btn:active {
+        transform: translateY(1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+
+
+.questions-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.question{
+    border-bottom: 1px solid #E0B0FF;
+}
+.question button{
+    width: 100%;
+    background-color: #924dbf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color:  #fffefe;;
+    font-weight: 700;
+    cursor: pointer;
+}
+.question p{
+    font-size: 22px;
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.5;
+    overflow: hidden;
+    transition: all 0.6s ease;
+}
+.d-arrow{
+    transition: transform 0.5s ease-in ;
+    color: #fff;
+}
+
+/*add this class when click*/
+.question p.show{
+    max-height: 200px; 
+    opacity: 1;
+    padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+    transform: rotate(180deg);
+}
+
+    
+</style>
   <title>ASTERIA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -22,7 +97,10 @@
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
-
+    <!-- fontawasome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -36,9 +114,11 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/faq.css" rel="stylesheet">
 
 </head>
 
@@ -58,6 +138,7 @@
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#tokenomics">Tokenomics</a></li>
           <li><a class="nav-link   scrollto" href="#roadmap">Roadmap</a></li>
+          <li><a class="nav-link   scrollto" href="#FAQ">FAQ</a></li>
           <!-- <li><a class="nav-link scrollto" href="#presale">Presale</a></li> -->
           <!-- <li class="nav-btn">
 
@@ -118,7 +199,7 @@
           <h2 class="mt-4">Join the cryptocurrency revolution with the brightest star inspired Asteria Token! </h2>
           <!--  <div class="col-md-12 col-lg-12 d-flex">-->
             <div class="">
-              <a href="#joinpresale" target=""><button class="btn-sky-blue" style="width: 150px;  margin-top: 15px;">
+              <a href="#joinpresale" target=""><button class="btn-sky-blue" style="width: 150px;  margin-top: 0px;">
                   Join Presale Now
                 </button>
               </a>
@@ -151,11 +232,13 @@
       <div class="container" data-aos="fade-up">
         <div class="row content">
           <div class="col-lg-6">
+            <br>
             <img src="assets/images/logoimage2.jpg" class="img img-fluid" />
           </div>
           <div class="col-lg-6 pt-lg-0 mt-4 align-self-center">
             <div class="section-title">
               <span><img src="assets/images/Line.svg" /></span>
+
               <h2 class="mt-4">About</h2>
             </div>
 
@@ -205,11 +288,11 @@ Because of unknown reasons he lost all of his light and only his core was left.
               <h5 class="card-title font-family-orbitron-normal ">Asteria</h5>
               <div class="card-body table-custom-body">
                 <div class="row">
-                  <div class="col-lg-2">
-                    <p class="label">CA:</p>
+                  <div class="col-lg-7">
+                    <p class="label">Airdrop:</p>
                   </div>
-                  <div class="col-lg-10">
-                    <p class="value">0xAddYourContractAddressHere</p>
+                  <div class="col-lg-5">
+                    <p class="value">9.999.999.999</p>
                   </div>
                 </div>
 
@@ -218,7 +301,7 @@ Because of unknown reasons he lost all of his light and only his core was left.
                     <p class="label">Total Supply:</p>
                   </div>
                   <div class="col-lg-5">
-                    <p class="value">1,000,000,000,000,000</p>
+                    <p class="value">999.999.999.999</p>
                   </div>
                 </div>
 
@@ -227,7 +310,7 @@ Because of unknown reasons he lost all of his light and only his core was left.
                     <p class="label">Presale:</p>
                   </div>
                   <div class="col-lg-5">
-                    <p class="value">50.000.000.000</p>
+                    <p class="value">389.999.999.999</p>
                   </div>
                 </div>
                 <div class="row">
@@ -235,7 +318,7 @@ Because of unknown reasons he lost all of his light and only his core was left.
                     <p class="label">Exchange:</p>
                   </div>
                   <div class="col-lg-5">
-                    <p class="value">30.000.000.000</p>
+                    <p class="value">349.999.999.999</p>
                   </div>
                 </div>
 
@@ -249,10 +332,10 @@ Because of unknown reasons he lost all of his light and only his core was left.
                 </div>
                 <div class="row" style="border-radius: 0px 0px 10px 10px;">
                   <div class="col-lg-7">
-                    <p class="label">Team:</p>
+                    <p class="label">Cex.Dex Liquidity:</p>
                   </div>
                   <div class="col-lg-5">
-                    <p class="value">10.000.000.000</p>
+                    <p class="value">249.999.999.999</p>
                   </div>
                 </div>
               </div>
@@ -262,7 +345,7 @@ Because of unknown reasons he lost all of his light and only his core was left.
           <div class="col-lg-1">
           </div>
           <div class="col-lg-5 pt-4 pt-lg-0">
-            <img src="assets/images/chart.png" class="img img-fluid" />
+            <img src="assets/images/chart.png" class="img img-fluid"/>
           </div>
         </div>
       </div>
@@ -343,13 +426,119 @@ Because of unknown reasons he lost all of his light and only his core was left.
               <div class="card-body d-flex justify-content-center">
                 <ul>
                   <li>(Minimum 0.5 SOL, Maximum 30 SOL)</li>
-                  <li>Participate in the $ASTERIA presale by sending your choosen SOL amount directly </li>
-                    
-                
-                  <li>After the presale is complete the tokens will be airdropped to your wallet(Date to be annnounced)</li>
-    
+                  <li>Participate in the $ASTERIA presale by sending your choosen SOL amount directly </li>               
+                  <li>After the presale is complete the tokens will be airdropped to your wallet(Date to be annnounced)</li>   
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="FAQ" class="about" style="background-color: #021E0A;">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title d-flex justify-content-center">
+          <div class="text-align-last-center">
+            <span><img src="assets/images/Line.svg" /></span>
+            <h2 class="fmt-4  text-white mb-0">FAQ`s</h2>
+          </div>
+        </div>
+
+        <div class="row content mt-5 d-flex justify-content-center">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card d-flex justify-content-center">
+              <h5 class="card-title font-family-orbitron-normal ">To clarify common understanding, here is a list of frequently asked questions along with their answers.</h5>
+              <div class="card-body d-flex justify-content-center">
+               
+    <div class="questions-container">
+      <div class="question">
+          <button>
+              <span>What is ASTERIA TOKON?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p>Asteria, the brightest star in the crypto galaxy, 
+            is a groundbreaking Memecoin destined to redefine the future of the industry and lead us into an unprecedented era of innovation and excitement.
+
+
+
+
+
+
+          </p>
+      </div>
+
+      <div class="question">
+          <button>
+              <span>How do I stay up to date?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p>Become part of our vibrant Telegram and Twitter communities to be the first to receive exclusive news and announcements,
+             Find all our social media links effortlessly at the top of our website.
+             </p>
+      </div>
+
+      <div class="question">
+          <button>
+              <span>When can i caim my tokens?</span>
+              <i class="fas fa-chevron-down d-arrow"></i>
+          </button>
+          <p>After the presale is complete the tokens will be airdropped to your wallet(Date to be annnounced).</p>
+      </div>
+  </div>
+</section>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="joinpresale" class="about" style="background-color: #021E0A;">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="section-title d-flex justify-content-center">
+          <div class="text-align-last-center">
+            <span><img src="assets/images/Line.svg"></span>
+            <h2 class="fmt-4  text-white mb-0">Another Way </h2>
+            <h2 class="fmt-4  text-white mb-0">To Join Presale</h2>
+          </div>
+        </div>
+
+        <div class="row content mt-5 d-flex justify-content-center">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="card d-flex justify-content-center">
+             
+              <section class="another_way_area" id="presale">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-10 col-md-9 col-lg-8 text-center">
+                            <div class="section__title">
+                                
+                                <p style="color: aliceblue;">Having trouble connecting to the phantom wallet </p>
+                                <p style="color: aliceblue;"> Here is a simpler method Participate in the asteria token presale by sending your chosen SOL amount directly to the address:</p>
+                            </div>
+                      <br>
+                                <p class="min_max" style="color: aliceblue;">Minimum 0.5 SOL, Maximum 30 SOL</p>
+                                <p1 class="min_max" style="color: aliceblue;">6w1PPFQWrx1L5CPXc2zrBaUcQKVswSvMgopPqnsnJrHV</p1>
+                                <br>
+                                <div class="d-flex justify-content-center">
+                               
+                                  
+                                 <button class="boxed__btn" onclick="handleCopyClick()">Copy Address</button>
+                                </div>
+                                  <div class="d-flex justify-content-center">
+                                  <div class="qr_box_inner d-flex align-items-center gap-5">
+                                
+                                    <figure>
+                                        <img src="assets/images/QR-code.svg" class="card d-flex justify-content-center style=" alt="">
+                                    </figure>
+                                    </div>
+                                 
+                                </div>
+                         
+                        </div>
+                    </div>
+                </div>
+            </section>
             </div>
           </div>
 
@@ -357,14 +546,14 @@ Because of unknown reasons he lost all of his light and only his core was left.
         </div>
       </div>
     </section>
-
   
     <section id="clients" class="about" style="background-color: #6237a0">
       <div class="container" data-aos="fade-up">
         <div class="section-title d-flex justify-content-center">
           <div class="text-align-last-center">
             <span><img src="assets/images/Line.svg" /></span>
-            <h2 class="mt-4  text-white mb-0">Official Partners</h2>
+            <h2 class="mt-4  text-white mb-0">Featured In</h2>
+           
           </div>
         </div>
         <div class="row py-5" data-aos="zoom-in">
@@ -460,9 +649,33 @@ Because of unknown reasons he lost all of his light and only his core was left.
 
       </div>
     </section>
+    <script>
+    const buttons = document.querySelectorAll('button');
 
-
-
+    buttons.forEach( button =>{
+        button.addEventListener('click',()=>{
+            const faq = button.nextElementSibling;
+            const icon = button.children[1];
+    
+            faq.classList.toggle('show');
+            icon.classList.toggle('rotate');
+        })
+    } )
+</script>
+    <script>
+      function handleCopyClick() {
+          const contentToCopy = document.querySelector('.content p1').textContent;
+          navigator.clipboard.writeText(contentToCopy).then(() => {
+              const button = document.querySelector('.boxed__btn');
+              button.textContent = 'Copied!';
+              setTimeout(() => {
+                  button.textContent = 'Copy Address';
+              }, 2000);
+          }).catch(err => {
+              console.error('Failed to copy: ', err);
+          });
+      }
+  </script>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -470,7 +683,7 @@ Because of unknown reasons he lost all of his light and only his core was left.
     <div class="container footer-bottom clearfix">
       <div class="row content">
         <div class="col-lg-8">
-          <a href="#"><img src="assets/images/logo.png" alt="" class="img-fluid"></a>
+          <a href="#"><img src="assets/images/logo.png" alt="" class="img-fluid" style="max-height: 40px;"></a>
         </div>
         <div class="col-lg-4 align-self-center">
 
