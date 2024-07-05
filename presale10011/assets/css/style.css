@@ -1456,3 +1456,77 @@ color:#E0B0FF;
 #tokenomics .section-title h2 {
   color: #ffffff;
 }
+
+.column {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.button-9 {
+  background-color: #62379f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 30px;
+  width: 185px;
+  margin-top: 10px;
+  padding: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-9:hover {
+  background-color: #62379f;
+  transform: translateY(-2px);
+}
+
+.button-9:active {
+  background-color: #62379f;
+  transform: translateY(0);
+}
+
+.Input {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: transparent;
+  width: calc(100%);
+  font-size: 16px;
+}
+
+.Input:focus {
+  border-color: #e0b0ff;
+  outline: none;
+}
+
+#status_p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+#connect_button.connected {
+  background-color: #03dac6;
+  color: black;
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+#timer {
+  display: flex;
+  background-color: #62379f;
+  justify-content: space-around;
+  font-size: 21px;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
